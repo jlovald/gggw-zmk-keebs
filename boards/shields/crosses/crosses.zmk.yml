@@ -3,7 +3,7 @@ id: crosses
 name: Crosses
 type: shield
 url: https://github.com/Good-Great-Grand-Wonderful/crosses
-requires: [nice_nano_v2]
+requires: [nice_nano]
 exposes: [i2c_oled]
 features:
   - keys
