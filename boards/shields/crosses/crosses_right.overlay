@@ -10,14 +10,6 @@
   col-offset = <6>;
 };
 
-&forty_two_transform {
-  col-offset = <6>;
-};
-
-&thirty_six_transform {
-  col-offset = <6>;
-};
-
 &kscan0 {
   col-gpios
     = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
