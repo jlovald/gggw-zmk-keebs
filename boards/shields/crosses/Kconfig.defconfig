@@ -1,8 +1,8 @@
 # Copyright (c) 2025 Vincent Franco
 # SPDX-License-Identifier: MIT
 
-if SHIELD_CROSSES_RIGHT
 
+IF SHIELD_CROSSES_DONGLE
 config ZMK_KEYBOARD_NAME
   default "Crosses BT"
 
@@ -10,6 +10,8 @@ config ZMK_SPLIT_ROLE_CENTRAL
   default y
 
 endif
+
+
 
 if SHIELD_CROSSES_LEFT || SHIELD_CROSSES_RIGHT
 
@@ -25,6 +27,20 @@ config SSD1306
     default y
 
 endif # ZMK_DISPLAY
+
+if SHIELD_SWEEP_DONGLE
+
+if ZMK_DISPLAY
+
+config I2C
+    default y
+
+config SSD1306
+    default y
+
+choice ZMK_DISPLAY_WORK_QUEUE
+    default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
+endchoice
 
 if LVGL
 
@@ -43,4 +59,6 @@ endchoice
 
 endif # LVGL
 
-endif
+endif # ZMK_DISPLAY
+
+endif # SHIELD_SWEEP_DONGLE
