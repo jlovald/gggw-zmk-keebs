@@ -52,10 +52,12 @@
 };
 
 &trackball_right_split {
-  device = <&trackball_right>;
-  input-processors
-    = <&zip_xy_to_scroll_mapper>
-		, <&zip_ble_report_rate_limit>;
+    status = "okay";
+    compatible = "zmk,input-split";
+    input = <&trackball_right>;
+    reg = <1>;
+    input-processors = <&zip_xy_to_scroll_mapper>,
+                       <&zip_ble_report_rate_limit>;
 };
 
 &pro_micro_i2c {
