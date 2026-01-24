@@ -19,11 +19,12 @@
 };
 
 &trackball_left_listener {
-  status = "okay";
+    status = "okay";
+    device = <&trackball_left_split>;
 };
-
 &trackball_right_listener {
-  status = "okay";
+    status = "okay";
+    device = <&trackball_right_split>;
 };
 
 &xiao_i2c {
