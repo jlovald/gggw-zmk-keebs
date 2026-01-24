@@ -36,9 +36,10 @@
 };
 
 &trackball_left_split {
-    status = "okay";
-    input-processors = <&zip_xy_to_scroll_mapper>,
-                       <&zip_ble_report_rate_limit>;
+  device = <&trackball_left>;
+  input-processors
+    = <&zip_xy_to_scroll_mapper>
+		, <&zip_ble_report_rate_limit>;
 };
 
 &pro_micro_i2c {

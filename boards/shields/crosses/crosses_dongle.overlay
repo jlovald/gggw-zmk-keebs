@@ -18,16 +18,12 @@
 	status = "disabled";
 };
 
-/ {
-    trackball_left_listener: trackball_left_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball_left_split>;
-    };
+&trackball_left_listener {
+  status = "okay";
+};
 
-    trackball_right_listener: trackball_right_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball_right_split>;
-    };
+&trackball_right_listener {
+  status = "okay";
 };
 
 &xiao_i2c {
