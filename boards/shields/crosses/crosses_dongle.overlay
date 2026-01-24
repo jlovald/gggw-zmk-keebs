@@ -47,9 +47,8 @@
 
 &i2c0 {
     status = "okay"; /* make sure the bus is enabled */
-};
 
-oled: sh1106@3c {
+    oled: sh1106@3c {
     compatible = "sinowealth,sh1106";
     reg = <0x3c>;
     width = <128>;
@@ -60,3 +59,5 @@ oled: sh1106@3c {
     display-offset = <0>;
     prechargep = <0x22>;
 };
+};
+
