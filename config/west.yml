@@ -12,6 +12,8 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: englmaxi
       url-base: https://github.com/englmaxi
+    - name: tokyo2006
+      url-base: https://github.com/tokyo2006
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -28,8 +30,11 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
+    - name: prospector-zmk-module                 # <--- and these
+      remote: tokyo2006                          # <---
+      revision: change_spi2
     - name: zmk-dongle-display
       remote: englmaxi
-      revision: v0.3 # use 'v0.3' instead of 'main' if you use have pinned zmk to 'v0.3' or below
+      revision: v0.3
   self:
     path: config
