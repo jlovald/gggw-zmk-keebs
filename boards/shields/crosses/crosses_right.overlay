@@ -9,6 +9,8 @@
 #include "split_input.dtsi"
 #include <input/processors/xyz.dtsi>
 #include <behaviors/input_gestures_accel.dtsi>
+#include <input/processors/report_rate_limit.dtsi>
+#include "pmw3360.dtsi"
 
 &default_transform {
   col-offset = <6>;
@@ -35,27 +37,6 @@
 
 };
 
-&spi1 {
-  cs-gpios = <&gpio1 0 GPIO_ACTIVE_LOW>;
-
-  trackball: trackball@0 {
-    status = "okay";
-    compatible = "pixart,pmw3610-efogtech";
-    reg = <0>;
-    spi-max-frequency = <2000000>;
-    irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-    cpi = <200>;
-    xy-swap;
-	x-invert;
-    evt-type = <INPUT_EV_REL>;
-    x-input-code = <INPUT_REL_X>;
-    y-input-code = <INPUT_REL_Y>;
-    force-awake;
-    /* keep the sensor awake while ZMK activity state is ACTIVE,
-        fallback to normal downshift mode after ZMK goes into IDLE / SLEEP mode.
-        thus, the sensor would be a `wakeup-source` */
-  };
-};
 
 &pointer_accel { // this needs to be put BEFORE input-listener
     input-type = <INPUT_EV_REL>;
@@ -73,58 +54,4 @@
         <&pointer_accel>, // badjeff said to put this before <&zip_xyz>. Do this part when you still have raw XY data.
         <&zip_report_rate_limit 8>, // badjeff's limiter. Put this before <&zip_xyz>.
 		<&zip_xyz>; // compressor by badjeff
-};
-
-
-&pinctrl {
-    i2c0_default: i2c0_default {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 1, 4)>,
-                <NRF_PSEL(TWIM_SCL, 1, 6)>;
-        };
-    };
-
-    i2c0_sleep: i2c0_sleep {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 1, 4)>,
-                <NRF_PSEL(TWIM_SCL, 1, 6)>;
-            low-power-enable;
-        };
-    };
-
-    spi1_default: spi1_default {
-        group1 {
-            psels
-              = <NRF_PSEL(SPIM_SCK, 0, 17)>
-              , <NRF_PSEL(SPIM_MOSI, 0, 20)>
-              , <NRF_PSEL(SPIM_MISO, 0, 20)>
-              ;
-        };
-    };
-
-    spi1_sleep: spi1_sleep {
-        group1 {
-            psels
-              = <NRF_PSEL(SPIM_SCK, 0, 17)>
-              , <NRF_PSEL(SPIM_MOSI, 0, 20)>
-              , <NRF_PSEL(SPIM_MISO, 0, 20)>
-              ;
-            low-power-enable;
-        };
-    };
-};
-
-&i2c0 {
-    compatible = "nordic,nrf-twi";
-    pinctrl-0 = <&i2c0_default>;
-    pinctrl-1 = <&i2c0_sleep>;
-    pinctrl-names = "default", "sleep";
-};
-
-&spi1 {
-  status = "okay";
-  compatible = "nordic,nrf-spim";
-  pinctrl-0 = <&spi1_default>;
-  pinctrl-1 = <&spi1_sleep>;
-  pinctrl-names = "default", "sleep";
 };
