@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 
 
-IF SHIELD_CROSSES_DONGLE
+if SHIELD_CROSSES_DONGLE
 config ZMK_KEYBOARD_NAME
   default "Crosses BT"
 
