@@ -20,12 +20,14 @@
 
 &trackball_left_listener {
     status = "okay";
-    device = <&trackball_left_split>;
+    compatible = "zmk,input-listener";
+    device = <&trackball_left_split>;  /* points to peripheral split */
 };
 
 &trackball_right_listener {
     status = "okay";
-    device = <&trackball_right_split>;
+    compatible = "zmk,input-listener";
+    device = <&trackball_right_split>; /* points to peripheral split */
 };
 
 &xiao_i2c {
