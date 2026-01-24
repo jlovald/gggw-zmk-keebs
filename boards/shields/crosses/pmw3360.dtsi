@@ -1,6 +1,10 @@
 &spi1 {
   cs-gpios = <&gpio1 0 GPIO_ACTIVE_LOW>;
-
+    compatible = "nordic,nrf-spim";
+  pinctrl-0 = <&spi1_default>;
+  pinctrl-1 = <&spi1_sleep>;
+  pinctrl-names = "default", "sleep";
+  
   trackball: trackball@0 {
     status = "okay";
     compatible = "pixart,pmw3610-efogtech";
@@ -63,12 +67,4 @@
     pinctrl-0 = <&i2c0_default>;
     pinctrl-1 = <&i2c0_sleep>;
     pinctrl-names = "default", "sleep";
-};
-
-&spi1 {
-  status = "okay";
-  compatible = "nordic,nrf-spim";
-  pinctrl-0 = <&spi1_default>;
-  pinctrl-1 = <&spi1_sleep>;
-  pinctrl-names = "default", "sleep";
 };

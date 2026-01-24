@@ -24,6 +24,11 @@
 		;
 };
 
+&spi1 {
+    status = "okay";
+};
+
+
 /* https://github.com/oleksandrmaslov/zmk-pointing-acceleration?tab=readme-ov-file#configure-acceleration */
 &pointer_accel { // this needs to be put BEFORE input-listener
     input-type = <INPUT_EV_REL>;
