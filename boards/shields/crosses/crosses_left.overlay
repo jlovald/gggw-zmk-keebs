@@ -66,6 +66,11 @@
     };
 };
 
+&trackball_left_listener {
+  status = "okay";
+};
+
+
 
 &pinctrl {
     i2c0_default: i2c0_default {

@@ -18,14 +18,7 @@
 	status = "disabled";
 };
 
-&trackball_left_listener {
-  status = "okay";
-};
 
-
-&trackball_right_listener {
-  status = "okay";
-};
 
 
 &pinctrl {
