@@ -36,6 +36,10 @@
 
 };
 
+&spi1 {
+    status = "okay";
+};
+
 
 &pointer_accel { // this needs to be put BEFORE input-listener
     input-type = <INPUT_EV_REL>;
