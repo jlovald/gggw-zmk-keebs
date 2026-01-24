@@ -89,8 +89,7 @@
 		};
   };
 
-  //left hand trackball
- split_inputs {
+split_inputs {
     #address-cells = <1>;
     #size-cells = <0>;
 
@@ -104,17 +103,4 @@
         reg = <1>;
     };
 };
-
-  trackball_left_listener: trackball_left_listener {
-    compatible = "zmk,input-listener";
-    status = "disabled";
-    device = <&trackball_left_split>;
-  };
-
-  //right hand trackball
-  trackball_right_listener: trackball_right_listener {
-    compatible = "zmk,input-listener";
-    status = "disabled";
-    device = <&trackball_right_split>;
-  };
 };
