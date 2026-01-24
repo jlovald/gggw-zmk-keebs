@@ -40,7 +40,7 @@
 };
 
 // Overrides for the input-split child node
-&trackball_left_split {
+&trackball_split {
   device = <&trackball_left>;
   input-processors
     = <&zip_xy_to_scroll_mapper>
