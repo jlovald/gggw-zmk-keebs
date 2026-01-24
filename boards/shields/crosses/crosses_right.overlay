@@ -54,12 +54,11 @@
 &trackball_right_split {
     status = "okay";
     compatible = "zmk,input-split";
-    input = <&trackball_right>;
+    input = <&trackball_right>;               /* required for peripheral */
     reg = <1>;
     input-processors = <&zip_xy_to_scroll_mapper>,
                        <&zip_ble_report_rate_limit>;
 };
-
 &pro_micro_i2c {
     status = "okay";
 
