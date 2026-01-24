@@ -101,7 +101,7 @@
     
     trackball_right_split: trackball_right_split@1 {
       compatible = "zmk,input-split";
-      reg = <0>;
+      reg = <1>;
     };
   };
 
