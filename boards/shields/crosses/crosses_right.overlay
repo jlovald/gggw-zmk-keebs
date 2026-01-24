@@ -55,3 +55,8 @@
         <&zip_report_rate_limit 8>, // badjeff's limiter. Put this before <&zip_xyz>.
 		<&zip_xyz>; // compressor by badjeff
 };
+
+
+&zip_report_rate_limit {
+    limit-ble-only;
+};
