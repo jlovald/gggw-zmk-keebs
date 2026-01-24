@@ -54,6 +54,15 @@
   };
 };
 
+&pointer_accel { // this needs to be put BEFORE input-listener
+    input-type = <INPUT_EV_REL>;
+	min-factor = <600>;			  // 0.6x minimum for percision
+    max-factor = <3000>;          // 3.0x maximum acceleration
+    speed-threshold = <900>;      // Start acceleration at 900 counts/sec, just 1.5 inch/sec
+    speed-max = <1800>;           // Max acceleration at 1800 counts/sec, just 3 inch/sec
+    acceleration-exponent = <1>;  // 1:linear, 2:quadratic, 3:cubic
+	track-remainders;             // Accumulate fractional movements
+};
 
 &trackball_right_input { // local trackball *split* input device child node
 	device = <&trackball>;
