@@ -56,7 +56,6 @@
 
 &trackball_right_split {
     status = "okay";
-    input = <&trackball_right>;
     input-processors = <&zip_ble_report_rate_limit>;
 };
 
