@@ -111,7 +111,7 @@
     device = <&trackball_left_split>;
   };
 
-/trackball_right_listener: trackball_right_listener {
+  trackball_right_listener: trackball_right_listener {
     compatible = "zmk,input-listener";
     status = "disabled";
     device = <&trackball_right_split>;
