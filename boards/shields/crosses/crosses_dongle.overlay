@@ -1,5 +1,7 @@
 #include "crosses.dtsi"
-
+#include "split_input.dtsi"
+#include <input/processors.dtsi>
+#include <input/processors/xyz.dtsi>
 / {
 	chosen {
 		zmk,kscan = &mock_kscan;
