@@ -21,7 +21,7 @@
 &spi1 {
   cs-gpios = <&gpio1 0 GPIO_ACTIVE_LOW>;
 
-  trackball_left: trackball_left@0 {
+  trackball: trackball@0 {
     status = "okay";
     compatible = "pixart,pmw3610-efogtech";
     reg = <0>;
@@ -40,20 +40,13 @@
   };
 };
 
-// Overrides for the input-split child node
-&trackball_split {
-  device = <&trackball_left>;
-  input-processors
-    = <&zip_xy_to_scroll_mapper>
-		, <&zip_ble_report_rate_limit>;
+&trackball_left_input { // local trackball *split* input device child node
+	device = <&trackball>;
+	input-processors =
+        <&pointer_accel>, // badjeff said to put this before <&zip_xyz>. Do this part when you still have raw XY data.
+        <&zip_report_rate_limit 8>, // badjeff's limiter. Put this before <&zip_xyz>.
+		<&zip_xyz>; // compressor by badjeff
 };
-
-
-&trackball_left_listener {
-  status = "okay";
-};
-
-
 
 &pinctrl {
     i2c0_default: i2c0_default {
