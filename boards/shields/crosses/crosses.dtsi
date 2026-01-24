@@ -90,7 +90,7 @@
   };
 
   split_inputs {
-    #address-cells = <2>;
+    #address-cells = <1>;
     #size-cells = <0>;
 
     trackball_left_split: trackball_left_split@0 {
