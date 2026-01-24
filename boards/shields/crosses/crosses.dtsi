@@ -29,18 +29,10 @@
     zmk,kscan = &kscan0;
     zephyr,display = &oled;
     zmk,battery = &vbatt;
-    zmk,underglow = &led_strip;
-    zmk,backlight = &backlight;
     zmk,physical-layout = &gggw_crosses_54_layout;
   };
 
-
-  backlight: pwmleds {
-        compatible = "pwm-leds";
-        pwm_led_0 {
-            pwms = <&pwm0 0 PWM_MSEC(1) PWM_POLARITY_NORMAL>;
-        };
-  };
+ 
   ext-power {
       compatible = "zmk,ext-power-generic";
       label = "EXT_POWER";
@@ -49,7 +41,7 @@
   };
   vbatt: vbatt {
         compatible = "zmk,battery-nrf-vddh";
-  };
+    };
 
   default_transform: keymap_transform0 {
     compatible = "zmk,matrix-transform";
