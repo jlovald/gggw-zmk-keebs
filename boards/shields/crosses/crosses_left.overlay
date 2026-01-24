@@ -18,30 +18,33 @@
 };
 
 &spi1 {
-    cs-gpios = <&gpio1 0 GPIO_ACTIVE_LOW>;
+  cs-gpios = <&gpio1 0 GPIO_ACTIVE_LOW>;
 
-    trackball_left: trackball_left@0 {
-        status = "okay";
-        compatible = "pixart,pmw3610-efogtech";
-        reg = <0>;
-        spi-max-frequency = <2000000>;
-        irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        cpi = <700>;
-        xy-swap;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-        force-awake;
-    };
+  trackball_left: trackball_left@0 {
+    status = "okay";
+    compatible = "pixart,pmw3610-efogtech";
+    reg = <0>;
+    spi-max-frequency = <2000000>;
+    irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    cpi = <200>;
+    xy-swap;
+	x-invert;
+    evt-type = <INPUT_EV_REL>;
+    x-input-code = <INPUT_REL_X>;
+    y-input-code = <INPUT_REL_Y>;
+    force-awake;
+    /* keep the sensor awake while ZMK activity state is ACTIVE,
+        fallback to normal downshift mode after ZMK goes into IDLE / SLEEP mode.
+        thus, the sensor would be a `wakeup-source` */
+  };
 };
 
+// Overrides for the input-split child node
 &trackball_left_split {
-    status = "okay";
-    compatible = "zmk,input-split";
-    input = <&trackball_left>;
-    reg = <0>;
-    input-processors = <&zip_xy_to_scroll_mapper>,
-                       <&zip_ble_report_rate_limit>;
+  device = <&trackball_left>;
+  input-processors
+    = <&zip_xy_to_scroll_mapper>
+		, <&zip_ble_report_rate_limit>;
 };
 
 &pro_micro_i2c {
