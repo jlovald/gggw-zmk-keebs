@@ -25,7 +25,7 @@
     trackball_left_listener: trackball_left_listener {
         compatible = "zmk,input-listener";
         status = "disabled";
-        device = <&trackball_left_split_input>;
+        device = <&trackball_left_input>;
     };
 
     trackball_right_listener: trackball_right_listener {
