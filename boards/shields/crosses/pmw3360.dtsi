@@ -2,11 +2,7 @@
 
 &spi1 {
   cs-gpios = <&gpio1 0 GPIO_ACTIVE_LOW>;
-  status = "okay";
-  compatible = "nordic,nrf-spim";
-  pinctrl-0 = <&spi1_default>;
-  pinctrl-1 = <&spi1_sleep>;
-  pinctrl-names = "default", "sleep";
+  
   trackball: trackball@0 {
     status = "okay";
     compatible = "pixart,pmw3610-efogtech";
