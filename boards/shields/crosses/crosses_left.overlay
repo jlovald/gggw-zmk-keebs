@@ -27,3 +27,7 @@
 	device = <&trackball>;
 	status = "okay";
 };
+
+&trackball_right_input { 
+	device = <&trackball>;
+};

@@ -35,12 +35,9 @@
 
 };
 
-&spi1 {
-    status = "okay";
+&trackball_left_input { 
+	device = <&trackball>;
 };
-
-
-
 
 &trackball_right_input { 
 	device = <&trackball>;
