@@ -44,7 +44,7 @@
 
 &trackball_right_input { // local trackball *split* input device child node
 	device = <&trackball>;
-	
+	status = "okay";
 };
 
 
