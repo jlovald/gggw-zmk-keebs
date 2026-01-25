@@ -22,3 +22,8 @@
 };
 
 
+
+&trackball_left_input { 
+	device = <&trackball>;
+	status = "okay";
+};
