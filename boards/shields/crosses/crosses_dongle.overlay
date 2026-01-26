@@ -63,30 +63,16 @@
 	status = "okay";
     input-processors =
         <&zip_zxy>, // decompressor by badjeff. This needs to be at the head of the pipeline.
-        <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>;
-	scroll {
-		layers = <5>; // SCROLL
-		input-processors =
-            <&zip_zxy>, // decompressor by badjeff
-            <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,
-            <&zip_xy_scaler 1 16>,
-            <&zip_xy_to_scroll_mapper>;            
-	};
+        ;
+	
 };
 
 &trackball_right_listener {
 	status = "okay";
     input-processors =
-        <&zip_zxy>, // decompressor by badjeff. This needs to be at the head of the pipeline.
-        <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>;
-	scroll {
-		layers = <5>; // SCROLL
-		input-processors =
             <&zip_zxy>, // decompressor by badjeff
-            <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,
-            <&zip_xy_scaler 1 16>,
-            <&zip_xy_to_scroll_mapper>;            
-	};
+            <&zip_xy_scaler 1 4>,
+            <&zip_xy_to_scroll_mapper>;        
 };
 
 
