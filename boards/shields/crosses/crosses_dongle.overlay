@@ -62,7 +62,7 @@
 &trackball_left_listener {
 	status = "okay";
     input-processors =
-        <&zip_zxy>, // decompressor by badjeff. This needs to be at the head of the pipeline.
+        <&zip_zxy> // decompressor by badjeff. This needs to be at the head of the pipeline.
         ;
 	
 };
