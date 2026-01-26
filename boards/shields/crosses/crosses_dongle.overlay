@@ -71,7 +71,7 @@
     status = "okay";
     input-processors =
             <&zip_zxy>, // decompressor by badjeff
-            <&zip_xy_inverter 1 0>;    // flip X-axis, keep Y the same
+            <&zip_xy_inverter 1 0>,    // flip X-axis, keep Y the same
             <&zip_xy_scaler 1 4>,
             <&zip_xy_to_scroll_mapper>;        
 	
