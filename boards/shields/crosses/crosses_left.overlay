@@ -30,5 +30,5 @@
 
 &trackball_right_input { 
 	device = <&trackball>;
-	status = "disabled"
+	status = "disabled";
 };
