@@ -6,3 +6,5 @@ config SHIELD_CROSSES_LEFT
 
 config SHIELD_CROSSES_RIGHT
   def_bool $(shields_list_contains,crosses_right)
+config SHIELD_CROSSES_PEDALS
+  def_bool $(shields_list_contains,crosses_pedals)

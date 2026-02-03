@@ -1,0 +1,19 @@
+/*
+ * Copyright (c) 2025 Vincent Franco
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "crosses.dtsi"
+
+&kscan0 {
+  col-gpios
+    = <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+};
+
+&default_transform {
+  col-offset = <5>;
+  row-offset = <4>
+};
+
+
