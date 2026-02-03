@@ -16,6 +16,7 @@
                 &kp LCTRL &kp A  &kp S  &kp D  &kp F  &kp G    &studio_unlock &kp J  &kp K     &kp L   &kp SEMI &kp SQT
                 &kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B    &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
                             &lt 3 LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+                                                 &kp TILDE &kp TILDE
             >;
         };
 
@@ -27,6 +28,7 @@
                 &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
                 &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
                                             &lt 3 LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+                                                  &kp TILDE &kp TILDE
 
             >;
         };
@@ -39,6 +41,7 @@
                 &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
                 &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
                                         &lt 3 LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+                                                  &kp TILDE &kp TILDE
             >;
         };
 
@@ -50,6 +53,7 @@
                 &trans &trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &trans  &trans &trans
                 &trans &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans &trans
                                 &trans     &trans     &trans  &trans  &trans  &trans
+                                                      &kp TILDE &kp TILDE
             >;
         };
     };
