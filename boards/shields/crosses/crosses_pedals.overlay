@@ -12,8 +12,8 @@
 };
 
 &default_transform {
-  col-offset = <5>;
-  row-offset = <4>;
+  col-offset = <5>
+  row-offset = <5>
 };
 
 
