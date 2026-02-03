@@ -12,7 +12,7 @@
 };
 
 &default_transform {
-  col-offset = <5>
+  col-offset = <5>;
   row-offset = <5>
 };
 
