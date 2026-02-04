@@ -7,13 +7,15 @@
 
 &kscan0 {
   col-gpios
-    = <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+    = <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+;
+
 	row-gpios
         = <&gpio0 24 GPIO_ACTIVE_HIGH>
-         ;
+		;
 };
 
-&default_transform {~~~~~~~~~~~~~
+&default_transform {
   col-offset = <0>;
   row-offset = <0>;
 };
