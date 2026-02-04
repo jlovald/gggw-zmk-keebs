@@ -8,7 +8,7 @@
 
         keys  //                     w   h    x    y     rot    rx    ry
             = 
-              <&key_physical_attrs 100 100    0  112       0     0     0>
+   = <&key_physical_attrs 100 100    0  112       0     0     0>
             , <&key_physical_attrs 100 100  100  112       0     0     0>
             , <&key_physical_attrs 100 100  200   62       0     0     0>
             , <&key_physical_attrs 100 100  300    0       0     0     0>
@@ -44,24 +44,15 @@
             , <&key_physical_attrs 100 100 1212  262       0     0     0>
             , <&key_physical_attrs 100 100 1312  312       0     0     0>
             , <&key_physical_attrs 100 100 1415  312       0     0     0>
-            , <&key_physical_attrs 100 100    0  412       0     0     0>
-            , <&key_physical_attrs 100 100  100  412       0     0     0>
-            , <&key_physical_attrs 100 100  200  362       0     0     0>
-            , <&key_physical_attrs 100 100  300  300       0     0     0>
-            , <&key_physical_attrs 100 100  400  325       0     0     0>
-            , <&key_physical_attrs 100 100  500  338       0     0     0>
-            , <&key_physical_attrs 100 100  912  338       0     0     0>
-            , <&key_physical_attrs 100 100 1012  325       0     0     0>
-            , <&key_physical_attrs 100 100 1112  300       0     0     0>
-            , <&key_physical_attrs 100 100 1212  362       0     0     0>
-            , <&key_physical_attrs 100 100 1312  412       0     0     0>
-            , <&key_physical_attrs 100 100 1415  412       0     0     0>
-            , <&key_physical_attrs 100 100  350  472       0     0     0>
-            , <&key_physical_attrs 100 100  450  472       0     0     0>
-            , <&key_physical_attrs 100 100  550  472       0     0     0>
-            , <&key_physical_attrs 100 100  850  472       0     0     0>
-            , <&key_physical_attrs 100 100  950  472       0     0     0>
-            , <&key_physical_attrs 100 100 1050  472       0     0     0>
+            , <&key_physical_attrs 100 100  350  372       0     0     0>
+            , <&key_physical_attrs 100 100  450  372       0     0     0>
+            , <&key_physical_attrs 100 100  550  372       0     0     0>
+            , <&key_physical_attrs 100 100  850  372       0     0     0>
+            , <&key_physical_attrs 100 100  950  372       0     0     0>
+            , <&key_physical_attrs 100 100 1050  372       0     0     0>
+            
+           
+
             , <&key_physical_attrs 120 120  600  472   0 0 0>  // Pedal left
             , <&key_physical_attrs 120 120  800  472   0 0 0>  // Pedal right
             ;
