@@ -7,7 +7,6 @@
         display-name = "42 Key";
 
         keys  //                     w   h    x    y     rot    rx    ry
-            = 
    = <&key_physical_attrs 100 100    0  112       0     0     0>
             , <&key_physical_attrs 100 100  100  112       0     0     0>
             , <&key_physical_attrs 100 100  200   62       0     0     0>
