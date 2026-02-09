@@ -8,14 +8,11 @@
 #include <input/processors/report_rate_limit.dtsi>
 #include <behaviors/rate_limit.dtsi>
 
-#include "fifty_four_layout.dtsi"
 #include "forty_two_layout.dtsi"
-#include "thirty_six_layout.dtsi"
 
 &gggw_crosses_42_layout {
   transform = <&default_transform>;
 };
-
 
 / {
   chosen {
