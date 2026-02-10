@@ -19,6 +19,26 @@
             >;
         };
 
+symbols_layer {
+    display-name = "Symbols";
+    bindings = <
+&trans &trans &trans &trans   &trans &trans &trans   &trans &trans &trans &trans &trans
+&trans &trans &trans &trans   &trans &trans &trans   &trans &trans &trans &trans &trans
+&trans &trans &trans &trans   &trans &trans &trans   &trans &trans &trans &trans &trans
+                   &trans &trans &trans &trans   &trans &trans &trans &trans
+    >;
+};
+
+nav_layer {
+    display-name = "Nav";
+    bindings = <
+&trans &trans &trans &trans   &trans &trans &trans   &trans &trans &trans &trans &trans
+&trans &trans &trans &trans   &trans &trans &trans   &trans &trans &trans &trans &trans
+&trans &trans &trans &trans   &trans &trans &trans   &trans &trans &trans &trans &trans
+                   &trans &trans &trans &trans   &trans &trans &trans &trans
+    >;
+};
+
         lower_layer {
             display-name = "Lower";
             bindings = <
