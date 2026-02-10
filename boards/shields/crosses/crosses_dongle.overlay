@@ -63,6 +63,7 @@
         segment-remap;
         com-invdir;
         inversion-on;
+    
         prechargep = <0x22>;
 	};
 };
@@ -81,7 +82,7 @@
 	status = "okay";
     input-processors =
         <&zip_zxy>, // decompressor by badjeff
-        <&zip_xy_scaler 4 4>,
+        <&zip_xy_scaler 8 8>,
         <&zip_xy_transform INPUT_TRANSFORM_X_INVERT> // decompressor by badjeff. This needs to be at the head of the pipeline.
         ;
 };
