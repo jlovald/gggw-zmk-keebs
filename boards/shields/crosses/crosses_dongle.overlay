@@ -80,7 +80,7 @@
 &trackball_right_listener {
 	status = "okay";
     input-processors =
-        &zip_xy_transform INPUT_TRANSFORM_X_INVERT // decompressor by badjeff. This needs to be at the head of the pipeline.
+        <&zip_xy_transform INPUT_TRANSFORM_X_INVERT> // decompressor by badjeff. This needs to be at the head of the pipeline.
         ;
 };
 
